@@ -15,6 +15,10 @@ go to the JavaScript file and you can customize starting and ending points, inor
 
 
 
+One important aspect of A* is f = g + h. The f, g, and h variables are in our Node class and get calculated every time we create a new node. Quickly I’ll go over what these variables mean.
+F is the total cost of the node.
+G is the distance between the current node and the start node.
+H is the heuristic — estimated distance from the current node to the end node.
 
 
 Evaluating a node involves first checking if it is the target node – if this is the case, a path has been found and the algorithm terminates. Failing this, the node is removed from the open set and marked as visited so that is will not be re-added (this prevents the algorithm from generating loops). Finally, each of the nodes immediate unvisited neighbours are added to the open set. Crucially, for each of these neighbouring nodes, the current node is marked as their predecessor.
