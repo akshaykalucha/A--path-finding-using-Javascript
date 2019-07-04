@@ -9,3 +9,13 @@ go to the JavaScript file and you can customize starting and ending points, inor
 
 
 ![nodes](https://user-images.githubusercontent.com/40710016/60679602-ceede380-9ea5-11e9-97ec-ec3dfbdbf311.png)
+
+
+
+
+
+
+
+how to change the starting and ending node
+
+![startend](https://user-images.githubusercontent.com/40710016/60679844-bfbb6580-9ea6-11e9-9cee-649499df4fd9.PNG)
