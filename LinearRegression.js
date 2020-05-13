@@ -10,6 +10,7 @@ var b = 0
 var data = []
 
 
+// Ordinary least square
 function linearRegression(){
     var xsum = 0;
     var ysum = 0;
@@ -33,6 +34,22 @@ function linearRegression(){
 
     m = num /den
     b = ymean - m*xmean
+}
+
+
+function GradientLinearRegression(){
+
+    var lr = 0.1
+    for (var i =0; i<data.length; i++){
+        x = data[i].x
+        y = data[i].y
+
+        var guess = m * x + b;
+        var error = y - guess;
+    
+        m = m + (error*x) * lr;
+        b = b + (error) * lr;
+    }
 }
 
 function darwLine(){
@@ -73,7 +90,7 @@ function draw(){
     }
 
     if(data.length>1){
-        linearRegression()
+        GradientLinearRegression()
         darwLine()
     }
 }
